@@ -1,0 +1,10 @@
+@import 'normalize.css';
+@tailwind base;
+@tailwind component;
+@tailwind utilities;
+:root {
+  --main-color: #181A2A;
+  --secondary-color: #4B6BFB;
+  --text-color: #97989F;
+  --highlighted-text-color: #696A75;
+}
