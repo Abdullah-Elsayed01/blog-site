@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import '../../index.css';
+
+h1 {
+  @apply text-sm;
+}
+li {
+  @apply text-sm mx-1 hover:bg-grey-100 hover:opacity-70 cursor-pointer p-1 rounded-sm;
+}

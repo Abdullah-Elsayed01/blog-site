@@ -5,8 +5,8 @@
     "content": "<p>Join us on a journey to discover the mysteries of ancient civilizations and their breathtaking ruins...</p>",
     "image": "https://source.unsplash.com/random/800x600?ancient",
     "author": {
-      "name": "Elijah Reed",
-      "profile_picture": "https://i.pravatar.cc/150?img=31"
+      "name": "John Doe",
+      "profile_picture": "https://img.freepik.com/free-photo/portrait-positive-handsome-blond-man-with-beard-moustache-standing-with-crossed-hands-white-shirt-with-slight-smile-confident-expression_176420-17129.jpg?semt=ais_hybrid&w=740"
     },
     "created_at": "2025-05-20T10:00:00Z",
     "category": "History"
@@ -17,8 +17,8 @@
     "content": "<p>Discover innovative techniques and flavors that define modern culinary arts. From molecular gastronomy to fusion cuisine...</p>",
     "image": "https://source.unsplash.com/random/800x600?food",
     "author": {
-      "name": "Caleb Stewart",
-      "profile_picture": "https://i.pravatar.cc/150?img=32"
+      "name": "John Doe",
+      "profile_picture": "https://img.freepik.com/free-photo/portrait-positive-handsome-blond-man-with-beard-moustache-standing-with-crossed-hands-white-shirt-with-slight-smile-confident-expression_176420-17129.jpg?semt=ais_hybrid&w=740"
     },
     "created_at": "2025-05-15T14:30:00Z",
     "category": "Food"
@@ -29,8 +29,8 @@
     "content": "<p>Take a thrilling ride through the cosmos as we explore the latest discoveries and missions in space exploration...</p>",
     "image": "https://source.unsplash.com/random/800x600?space",
     "author": {
-      "name": "Owen Murphy",
-      "profile_picture": "https://i.pravatar.cc/150?img=33"
+      "name": "John Doe",
+      "profile_picture": "https://img.freepik.com/free-photo/portrait-positive-handsome-blond-man-with-beard-moustache-standing-with-crossed-hands-white-shirt-with-slight-smile-confident-expression_176420-17129.jpg?semt=ais_hybrid&w=740"
     },
     "created_at": "2025-05-25T18:45:00Z",
     "category": "Science"
@@ -41,8 +41,8 @@
     "content": "<p>Learn the secrets behind capturing the stunning beauty of the natural world through the lens of a camera...</p>",
     "image": "https://source.unsplash.com/random/800x600?nature",
     "author": {
-      "name": "Asher Hayes",
-      "profile_picture": "https://i.pravatar.cc/150?img=34"
+      "name": "John Doe",
+      "profile_picture": "https://img.freepik.com/free-photo/portrait-positive-handsome-blond-man-with-beard-moustache-standing-with-crossed-hands-white-shirt-with-slight-smile-confident-expression_176420-17129.jpg?semt=ais_hybrid&w=740"
     },
     "created_at": "2025-05-10T09:15:00Z",
     "category": "Photography"
@@ -53,8 +53,8 @@
     "content": "<p>Embark on your coding journey with our comprehensive guide designed for absolute beginners. Learn the fundamentals of programming...</p>",
     "image": "https://source.unsplash.com/random/800x600?coding",
     "author": {
-      "name": "Silas Foster",
-      "profile_picture": "https://i.pravatar.cc/150?img=35"
+      "name": "John Doe",
+      "profile_picture": "https://img.freepik.com/free-photo/portrait-positive-handsome-blond-man-with-beard-moustache-standing-with-crossed-hands-white-shirt-with-slight-smile-confident-expression_176420-17129.jpg?semt=ais_hybrid&w=740"
     },
     "created_at": "2025-05-27T15:00:00Z",
     "category": "Technology"
