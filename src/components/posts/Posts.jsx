@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import './Posts.module.css';
 import articles from '../../../articles.json';
 import Post from '../post/Post';
 export default function Posts() {

@@ -13,8 +13,8 @@ I will break the project steps to make it easier to track.
 
 ## Steps
 - [x] Building the base structure for the project 
-- [ ] Put the design to the app (current)
-- [ ] Optimize the styling format and add the responsivity for each screen size
+- [x] Put the design to the app
+- [ ] Optimize the styling format and add the responsivity for each screen size (current)
 - [ ] Adding the functionality 
 - [ ] Routing
 

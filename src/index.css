@@ -2,15 +2,30 @@
 @import "tailwindcss";
 
 @theme {
+  /* COLORS */
   --color-black-100: #181A2A; 
   --color-blue-100: #4B6BFB; 
   --color-grey-100: #97989F; 
-  --color-grey-200: #696A75; 
+  --color-grey-200: #696A75;
+  /* FONT */
+  --font-bold : 500;
 }
 @layer components {
+  /* header components */
+  li {
+    @apply text-sm text-grey-200 mx-1 hover:bg-grey-100 hover:opacity-70 cursor-pointer p-1 rounded-sm;
+  }
   /* post components */
   .post > * {
     @apply p-4;
+  }
+  /* footer components */
+  footer {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+  footer div > * > * {
+    @apply py-2 text-sm;
   }
 }
 :root {
@@ -28,7 +43,6 @@ header, footer, section {
   @apply py-3;
 }
 .landing {
-  @apply bg-[#a9a9a9];
   padding: 5rem;
   text-align: center;
   width: 100vw;
