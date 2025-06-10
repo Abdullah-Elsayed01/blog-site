@@ -14,16 +14,16 @@ I will break the project steps to make it easier to track.
 ## Steps
 - [x] Building the base structure for the project 
 - [x] Put the design to the app
-- [ ] Optimize the styling format and add the responsivity for each screen size (current)
-- [ ] Adding the functionality 
+- [x] Optimize the styling format and add the responsivity for each screen size 
+- [ ] Adding the functionality (current)
 - [ ] Routing
 
 ## Problems
-currently i'm suffering from working with tailwind especially that they had a big update that changed a lot also i hadn't work on it enough so i'm getting used to it
+- [x] (FIXED) currently i'm suffering from working with tailwind especially that they had a big update that changed a lot also i hadn't work on it enough so i'm getting used to it
 
 ## Installation
 1. Fork the project and clone it to your  local repo then make your  
-1. Make your own branch `git checkout -b add-new-compoenent`
+1. Make your own branch `git checkout -b add-new-component`
 1. Save and pull request
 
 You can work on the project on your own i'm just trying to practice somethings.

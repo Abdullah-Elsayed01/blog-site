@@ -3,17 +3,31 @@
 export default function Post() {
   return (
     <>
-      <article className="mb-3 post mx-auto min-w-[250px] max-w-[300px] border border-grey-100/50 rounded-md">
-        <div className="post-img">
-          <img className='rounded-md' src="https://www.planetware.com/wpimages/2020/02/norway-in-pictures-beautiful-places-to-photograph-lofoten.jpg" alt="nature-picture" />
+      <article className="post w-full
+      flex mb-3 hover cursor-pointer rounded-md">
+        <div className="post-img w-auto min-w-[30%] bg-[url(https://www.planetware.com/wpimages/2020/02/norway-in-pictures-beautiful-places-to-photograph-lofoten.jpg)] bg-cover bg-center">
+        {/* <img className='w-full h-full object-contain' src="https://www.planetware.com/wpimages/2020/02/norway-in-pictures-beautiful-places-to-photograph-lofoten.jpg" alt="nature-picture" /> */}
         </div>
-        <span className="post-category font-[500] text-xs ml-6 p-1 text-blue-100 rounded-sm bg-grey-100/25 ">Technology</span>
-        <div className="post-title font-[500] text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
-        <div className="post-info text-grey-100 text-xs flex justify-between align-center">
-          <div className="post-info-publish-date">2020-06-09</div>
-          <div className="post-info-full-post cursor-pointer font-[500] text-sm text-blue-100">See More</div>
+        <div className="post-info w-full p-2">
+          <p className="post-title font-bold ">The Impact of Technology on the Workplace: How Technology is Changing.</p>
+          <div className="post-details text-grey-100 text-xs align-center">
+            <div className="post-details-publish-date">2020-06-09</div>
+          </div>
         </div>
       </article>
     </>
   )
 }
+      // <article className="post p-3 mb-3 mx-auto w-[250px] border border-grey-100/50 rounded-md">
+      //   <div className="post-img">
+      //     <img className='rounded mb-4' src="https://www.planetware.com/wpimages/2020/02/norway-in-pictures-beautiful-places-to-photograph-lofoten.jpg" alt="nature-picture" />
+      //   </div>
+      //   <div className="post-info @sm:bg-red-100">
+      //     <span className="post-category font-[500] tracking-wide text-xs ml-4 p-1 bg-blue-100 text-white! rounded-sm">Technology</span>
+      //     <div className="post-title font-bold text-lg">The Impact of Technology on the Workplace: How Technology is Changing.</div>
+      //     <div className="post-details text-grey-100 text-xs flex justify-between align-center">
+      //       <div className="post-details-publish-date">2020-06-09</div>
+      //       <div className="post-details-full-post cursor-pointer font-bold text-sm text-blue-100">See More</div>
+      //     </div>
+      //   </div>
+      // </article>

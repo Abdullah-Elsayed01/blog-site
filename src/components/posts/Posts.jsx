@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
-import articles from '../../../articles.json';
+// import { useEffect } from 'react'
+// import articles from '../../../articles.json';
 import Post from '../post/Post';
 export default function Posts() {
   // useEffect(() => {
@@ -7,11 +7,17 @@ export default function Posts() {
   //   console.log(articles)
   // },[])
   return(
-    <section>
-      <div className="section-title text-md font-[500] my-3">
+    <section className='container @container'>
+      <div className="section-title text-md font-bold my-3 mx-1">
         Recent Posts
       </div>
-      <Post />
+      <div className='posts-wrapper grid md:grid-cols-2 auto-rows-min gap-2'>
+        <Post />
+        <Post />
+        <Post />
+        <Post />
+        <Post />
+      </div>
     </section>
   )
 }
