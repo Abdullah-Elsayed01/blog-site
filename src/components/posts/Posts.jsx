@@ -1,23 +1,27 @@
-// import { useEffect } from 'react'
-// import articles from '../../../articles.json';
 import Post from '../post/Post';
-export default function Posts() {
-  // useEffect(() => {
-  //   articles.sort((a,b) => b.created_at.localeCompare(a.created_at)) // recent posts
-  //   console.log(articles)
-  // },[])
+import articles from '../../../articles.json';
+import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useDebounced } from "../hooks/useDebounced";
+export default function Posts({searchValue}) {
+  const debouncedValue = useDebounced(searchValue);
+  const navigate = useNavigate()
+  const [originalArticlesTotal, setOriginalArticlesTotal] = useState(articles)
+  const [articlesTotal, setArticlesTotal] = useState(articles)
+  articlesTotal.sort((a,b) => b.created_at.localeCompare(a.created_at)) // recent posts
+  useEffect(() => {
+    const filteredArticles = originalArticlesTotal.filter((article) => article.title.toLowerCase().includes(debouncedValue.toLowerCase()))
+    setArticlesTotal(filteredArticles)
+  }, [debouncedValue, originalArticlesTotal])
   return(
-    <section className='container @container'>
-      <div className="section-title text-md font-bold my-3 mx-1">
-        Recent Posts
-      </div>
-      <div className='posts-wrapper grid md:grid-cols-2 auto-rows-min gap-2'>
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
+    <section className='posts-section container'>
+      <div className='grid auto-rows-min gap-2'>
+        {articlesTotal.map((article) => {
+          return <Post onclick={() => navigate(`/blogs/${article.id}`)} key={article.id} content={article}/>
+        })}
       </div>
     </section>
   )
 }
+
+
