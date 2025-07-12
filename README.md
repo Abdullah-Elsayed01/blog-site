@@ -3,7 +3,7 @@
 ## A multi page project that illustrates blogs and other information about John Doe
 
 I made this project to go throw all my react skills and put it on one app and even learn some like routing and implementing it to the project,.  
-check out the project from [here](https://abdullah-elsayed01.github.io/Blog-app/)
+check out the project from [here](https://abdullah-elsayed01.github.io/blog-site/)
 
 I will break the project steps to make it easier to track.
 
@@ -18,7 +18,7 @@ I will break the project steps to make it easier to track.
 - [x] Building the base structure for the project
 - [x] Put the design to the app
 - [x] Optimize the styling format and add the responsivity for each screen size
-- [s] Adding the functionality (current)
+- [x] Adding the functionality (current)
 - [x] Routing
 
 ## Problems

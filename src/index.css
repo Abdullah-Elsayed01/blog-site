@@ -1,34 +1,53 @@
-@import 'normalize.css';
+@import "normalize.css";
 @import "tailwindcss";
+
+/* .light {
+  --bg-dark: hsl(224 100% 98%);
+  --bg: hsl(224 100% 100%);
+  --bg-light: hsl(224 100% 100%);
+  --text: hsl(263 100% 13%);
+  --text-muted: hsl(234 68% 41%);
+  --highlight: hsl(225 100% 100%);
+  --border: hsl(228 90% 64%);
+  --border-muted: hsl(227 100% 76%);
+  --primary: hsl(234 68% 41%);
+  --secondary: hsl(39 100% 12%);
+  --danger: hsl(4 99% 37%);
+  --warning: hsl(50 100% 12%);
+  --success: hsl(159 100% 9%);
+  --info: hsl(215 95% 42%);
+} */
 
 @theme {
   /* COLORS */
-  --color-custom-black: #181A2A; 
-  --color-custom-white: #ffffff;
-  --color-custom-blue: #4B6BFB; 
-  --color-custom-grey: #97989F; 
-  --color-custom-grey-2: #696A75;
+  --color-custom-black: hsl(0, 0%, 0%);
+  --color-custom-white: hsl(0, 0%, 100%);
+  --color-custom-blue: hsl(229, 96%, 64%);
+  --color-custom-grey: hsl(300 0% 69%);
+  --color-custom-grey-2: hsl(235, 5%, 44%);
   /* FONT */
-  --font-weight-bold : 575;
+  --font-weight-bold: 575;
   /* FONT SIZE */
-  --text-xs : min(3vw,0.8rem);
-  --text-sm : min(3.5vw, 0.85rem);
-  --text-2sm : [min(4vw,1.125rem)];
-  --text-md : min(4vw,1.45rem);
-  --text-lg : min(5vw,1.75rem);
-  --text-xl : min(6vw,2.25rem);
-  --text-2xl : min(8.5vw,2.5rem);
+  --text-xs: min(3vw, 0.8rem);
+  --text-sm: min(3.5vw, 0.85rem);
+  --text-2sm: [min(4vw, 1.125rem)];
+  --text-md: min(4vw, 1.45rem);
+  --text-lg: min(5vw, 1.75rem);
+  --text-xl: min(6vw, 2.25rem);
+  --text-2xl: min(8.5vw, 2.5rem);
 }
 
 /* # Base Styles */
-  html, body, #root {
-    height: 100%;
-  }
-  body  {
-    @apply text-custom-black;
-    overflow-x: hidden;
-    font-family: "Work Sans";
-  }
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  @apply text-custom-black;
+  overflow-x: hidden;
+  font-family: "Work Sans";
+}
 
 /* # Custom Utility Layer */
 @layer utilities {
@@ -46,12 +65,26 @@
 /* # Custom Components Layer */
 @layer components {
   .landing {
-    background: radial-gradient(theme("color.custom.black") 15%, transparent 16%), linear-gradient(45deg, transparent 49%, theme("color.custom.black") 49% 51%, transparent 51%), linear-gradient(-45deg, transparent 49%, theme("color.custom.black") 49% 51%, transparent 51%);
+    background:
+      radial-gradient(theme("color.custom.black") 15%, transparent 16%),
+      linear-gradient(
+        45deg,
+        transparent 49%,
+        theme("color.custom.black") 49% 51%,
+        transparent 51%
+      ),
+      linear-gradient(
+        -45deg,
+        transparent 49%,
+        theme("color.custom.black") 49% 51%,
+        transparent 51%
+      );
     background-size: 3em 3em;
     background-color: theme("color.custom.white");
     opacity: 1;
   }
-  .landing-container::before, .landing-container::after {
+  .landing-container::before,
+  .landing-container::after {
     position: absolute;
     content: ",,";
     font-size: 6.5rem;
@@ -70,37 +103,48 @@
 }
 /* ## Header Component */
 /* ## Navigation Component */
-  .navigation > * {
-    @apply mx-1 p-1 text-sm text-custom-grey-2 cursor-pointer rounded-sm hover:bg-custom-grey/15 ease-in-out duration-400;
-  }
+.navigation > * {
+  @apply mx-1 p-1 text-sm cursor-pointer rounded-sm hover:bg-custom-grey/15 ease-in-out duration-400;
+}
 /* ## Posts Component */
-  .posts-section-posts-wrapper > section > div > article:first-child,
-  .posts-section-posts-wrapper > section > div > article:nth-child(4), 
-  .posts-section-posts-wrapper > section > div > article:nth-child(5) {
-    @apply md:col-span-2;
-  }
-  .posts-section-posts-wrapper > section > div > article > .post-info-title {
-    @apply text-2sm;
-  }
-  .posts-section-posts-wrapper section > div > article:first-child .post-info-title {
-    @apply md:text-lg md:mb-[min(2rem)];
-  }
-  .posts-section-posts-wrapper section > div > article:nth-child(2) .post-info-title ,
-  .posts-section-posts-wrapper section > div > article:nth-child(3) .post-info-title
-  {
-    @apply md:text-md;
-  }
+.posts-section-posts-wrapper > section > div > article:first-child,
+.posts-section-posts-wrapper > section > div > article:nth-child(4),
+.posts-section-posts-wrapper > section > div > article:nth-child(5) {
+  @apply md:col-span-2;
+}
+.posts-section-posts-wrapper > section > div > article > .post-info-title {
+  @apply text-2sm;
+}
+.posts-section-posts-wrapper
+  section
+  > div
+  > article:first-child
+  .post-info-title {
+  @apply md:text-lg md:mb-[min(2rem)];
+}
+.posts-section-posts-wrapper
+  section
+  > div
+  > article:nth-child(2)
+  .post-info-title,
+.posts-section-posts-wrapper
+  section
+  > div
+  > article:nth-child(3)
+  .post-info-title {
+  @apply md:text-md;
+}
 /* ## Post Component */
-  .post {
-    overflow: hidden;
-  }
+.post {
+  overflow: hidden;
+}
 /* ## Footer Component */
 
 /* # Layout & Structure */
-  .body-wrapper { 
+.body-wrapper {
   /* Home Page */
   display: grid;
   gap: 0.275rem;
   grid-template-rows: auto 1fr auto;
   height: 100%;
-  }
+}

@@ -1,26 +1,37 @@
+import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
-import HomePage from "./pages/homePage";
-import BlogsPage from "./pages/BlogsPage";
-import AuthorPage from "./pages/AuthorPage";
-import PostDisplay from "./components/post-display/postDisplay";
-import NotFoundPage from "./pages/NotFoundPage";
-
+const HomePage = lazy(() => import("./pages/HomePage"));
+const BlogsPage = lazy(() => import("./pages/BlogsPage"));
+const AuthorPage = lazy(() => import("./pages/AuthorPage"));
+const SinglePostDisplay = lazy(
+  () => import("./components/post/SinglePostDisplay")
+);
+const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
+import { ArticlesContext } from "./contexts/ArticlesContext";
+import articles from "../articles.json";
 function App() {
   return (
-    <div className='body-wrapper '>
+    <div className="body-wrapper ">
       <Header />
-        <Routes>
-          <Route path='/' element={<HomePage />}/>
-          <Route path='/blogs' element={<BlogsPage />} />
-          <Route path='/blogs/:id' element={<PostDisplay />} />
-          <Route path='/author' element={<AuthorPage />}/>
-          <Route path='/*' element={<NotFoundPage />}/>
-        </Routes>
+      <ArticlesContext.Provider value={articles}>
+        <Suspense fallback={<h1>Loading...</h1>}>
+          <Routes>
+            <Route path="/blog-site" element={<HomePage />} />
+            <Route path="/blog-site/blogs" element={<BlogsPage />} />
+            <Route
+              path="/blog-site/blogs/:id"
+              element={<SinglePostDisplay />}
+            />
+            <Route path="/blog-site/author" element={<AuthorPage />} />
+            <Route path="/*" element={<NotFoundPage />} />
+          </Routes>
+        </Suspense>
+      </ArticlesContext.Provider>
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
