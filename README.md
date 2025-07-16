@@ -31,8 +31,8 @@ The complete project is here finally at his first version there are also some mo
 
 ## Modifications
 
--[] Dark mode  
--[] Performance issues (implementing the items or posts)
+-[x] Dark mode  
+-[x] Performance issues (implementing the items or posts)
 
 ## Installation
 

@@ -11,26 +11,23 @@ const SinglePostDisplay = lazy(
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 import { ArticlesContext } from "./contexts/ArticlesContext";
 import articles from "../articles.json";
+import AppLayout from "./layout/AppLayout";
+
 function App() {
   return (
-    <div className="body-wrapper ">
-      <Header />
+    <AppLayout>
       <ArticlesContext.Provider value={articles}>
-        <Suspense fallback={<h1>Loading...</h1>}>
+        <Suspense fallback={<h1 className="container">Loading...</h1>}>
           <Routes>
             <Route path="/blog-site" element={<HomePage />} />
-            <Route path="/blog-site/blogs" element={<BlogsPage />} />
-            <Route
-              path="/blog-site/blogs/:id"
-              element={<SinglePostDisplay />}
-            />
-            <Route path="/blog-site/author" element={<AuthorPage />} />
+            <Route path="blogs" element={<BlogsPage />} />
+            <Route path="blogs/:id" element={<SinglePostDisplay />} />
+            <Route path="author" element={<AuthorPage />} />
             <Route path="/*" element={<NotFoundPage />} />
           </Routes>
         </Suspense>
       </ArticlesContext.Provider>
-      <Footer />
-    </div>
+    </AppLayout>
   );
 }
 

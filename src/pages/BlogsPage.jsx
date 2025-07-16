@@ -14,10 +14,8 @@ export default function BlogsPage() {
           .toLowerCase()
           .includes(debouncedSearchValue.toLowerCase());
       });
-      console.log(`Modified Articles: ${filteredArticles}`);
       setFilteredArticles(filteredArticles);
     } else {
-      console.log(`Plain Articles: ${articles}`);
       setFilteredArticles(articles);
     }
   }, [debouncedSearchValue]);
@@ -29,7 +27,7 @@ export default function BlogsPage() {
         </h1>
         <input
           type="text"
-          className="page-search-bar p-1 placeholder:text-custom-grey placeholder:text-sm placeholder:pl-2 placeholder:italic border border-custom-grey-2 rounded-md"
+          className="page-search-bar py-2 px-2 bg-bg-light outline-none placeholder:text-text-muted placeholder:text-sm  placeholder:italic rounded-md placeholder:text-xs"
           placeholder="Search For Blog"
           onChange={(e) => setSearchValue(e.target.value)}
         />

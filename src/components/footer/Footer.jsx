@@ -1,10 +1,10 @@
 import Navigation from "../navigation-links/Navigation";
 export default function footer() {
   return (
-    <footer className="footer bg-custom-grey/15 mt-auto">
-      <div className="footer-container w-full container flex flex-col sm:flex-row sm:justify-between align-start *:*:w-[200px] *:*:py-2 *:*:text-sm">
+    <footer className="footer bg-border-muted text-white">
+      <div className="footer-container w-full container flex flex-col sm:flex-row sm:justify-between align-start *:*:w-[200px] *:*:py-2 ">
         <div className="footer-container-contact">
-          <h5 className="footer-container-contact-section-about-title text-custom-blue text-md">
+          <h5 className="footer-container-contact-section-about-title font-bold">
             About
           </h5>
           <div className="footer-container-contact-section-about-content">
@@ -15,14 +15,14 @@ export default function footer() {
             info@jstemplate.com
           </div>
           <div className="footer-container-contact-section-about-phone">
-            013-5846-581
+            013-584-5810
           </div>
         </div>
-        <div className="footer-container-contact-section-categories text-custom-blue">
-          <h5 className="footer-container-contact-section-categories-title">
+        <div className="footer-container-contact-section-categories">
+          <h5 className="footer-container-contact-section-categories-title font-bold">
             Navigation
           </h5>
-          <Navigation className={"footer"} />
+          <Navigation className={"footer text-muted"} />
         </div>
       </div>
     </footer>
